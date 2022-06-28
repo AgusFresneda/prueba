@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Manjari:wght@100&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+body {
+    background-color: #eeFe;
+    font-family: 'Manjari', sans-serif;
+}
+
+
+.title h1 {
+    padding: 20px 0;
+    text-align: center;
+    font-size: 2.9em;
+}
+
+.container {
+    background-color: white;
+    width: 90%;
+    max-width: 1000px;
+    margin: 1.6em auto;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(5, 1fr);
+
+}
+
+.header a {
+    text-decoration: none;
+    color: white;
+    font-size: 45px;
+}
+
+.header, .content, .sidebar, .footer, div {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+.header,.footer {
+    grid-column: 1/6;
+    background-color: rgb(37, 28, 44);
+    color: #eeFe;
+}
+
+.content {
+    grid-column: span 3;
+
+}
+
+.article {
+    background-color: rgb(253, 185, 255);
+    padding: 20px;
+    margin-top: 5px;
+    color:rgb(45, 48, 78);
+}
+
+.article h1, p {
+    padding: 10px;
+}
+
+.sidebar {
+    grid-column: span 2;
+    background-color: rgb(245, 174, 189);
+    color: rgb(55, 69, 95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sidebar img {
+    width: 100%;
+    margin-top: 5px;
+}
+
+.publicaciones-relacionadas {
+    background-color: rgb(174, 211, 253);
+    color: rgb(3, 54, 66);
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+}
+
+.publicaciones-relacionadas a{
+    text-decoration: none;
+    color: rgb(55, 69, 95);
+
+}
+
+.publicaciones-relacionadas:hover {
+    cursor: pointer;
+    color: palevioletred;
+    background-color: white;
+}
+
+/* Nosotros */
+
+.section {
+    grid-column: 1/6;
+}
+
+.section-one {
+    background-color: rgb(159, 249, 255);
+    padding: 30px;
+    margin-top: 5px;
+    color:rgb(45, 48, 78);
+}
+
+
+@media only screen and (max-width: 480px) {
+    .header {
+        text-align: center;
+    }
+
+    .content, .sidebar, .publicaciones-relacionadas  {
+        grid-column: 1/-1;
+    }
+
+
+}
